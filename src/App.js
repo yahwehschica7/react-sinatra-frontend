@@ -1,25 +1,27 @@
 import "./index.css"
 import React from "react"
 import {BrowserRouter as Router, Routes, Route} from "react-router-dom"
-// import NavBar from "./NavBar";
+import NavBar from "./components/NavBar";
 import Home from "./components/Home"
 // import BookContainer from "./BookContainer";
 // import WriterResources from "./WriterResources";
 // import Counter from "./Counter";
 
 function App() {
-  return (
-    <div className="App">
-        <Router>
-           <Routes>
-              <Route 
+    return (
+      <Router>
+        <NavBar />
+        <div className="App">
+          <Routes>
+            <Route 
               exact path="/" 
               element={<Home />}>
               </Route>
-            </Routes>
-        </Router>
-    </div>
-    )}
+          </Routes>
+        </div>
+      </Router>
+    )
+  }
             
     
 
