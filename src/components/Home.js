@@ -3,6 +3,10 @@ import React, { useEffect, useState } from "react"
 
 
 const Home = () => {
+
+  const [categories, setCategories] = useState("")
+  const [books, setBooks] = useState([])
+
   return (
     <div>
       <h2 style={{backgroundColor: "lightblue"}}>Books on your TBR:</h2>
