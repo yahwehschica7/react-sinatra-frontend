@@ -12,7 +12,7 @@ const NavBar = () => {
             </button>
         </NavLink>
         <NavLink
-            to="/books"
+            to="/categories"
             >
             <button style={{backgroundColor: "lightcyan"}}>
             <h2>Edit Your TBR</h2>

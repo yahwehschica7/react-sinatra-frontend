@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react"
-import BookContainer from "../containers/BookContainer"
+import CategoryContainer from "./CategoryContainer"
 
 
 const Home = () => {
@@ -8,9 +8,9 @@ const Home = () => {
   const [books, setBooks] = useState([])
 
   useEffect(() => {
-    fetch("http://localhost:9292/books")
+    fetch("http://localhost:9292/categories")
     .then((res) => res.json())
-    .then((data) => setBooks(data))
+    .then((data) => setCategories(data))
   }, [])
 
 
@@ -26,7 +26,7 @@ const Home = () => {
         <div className="dropdown">
           <button className="dropbtn" style={{backgroundColor: "lightcyan"}}>ALL</button>
         </div>
-        <BookContainer books={books}/>
+        <CategoryContainer categories={categories}/>
   </div>       
   )
 }
