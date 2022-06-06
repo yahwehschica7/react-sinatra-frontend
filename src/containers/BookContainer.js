@@ -1,4 +1,5 @@
 import React, {useEffect, useState} from 'react'
+import BookList from '../components/BookList'
 
 const BookContainer = () => {
 
@@ -12,7 +13,7 @@ const BookContainer = () => {
 
   return (
     <div>
-      <h1>BookContainer</h1>
+      <BookList books={books} />
     </div>
   )
 }
