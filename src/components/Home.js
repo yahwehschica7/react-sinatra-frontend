@@ -23,7 +23,7 @@ const Home = () => {
       <h2 >Books on your TBR:</h2>
         
         <div className="dropdown">
-          <button class="dropbtn" style={{backgroundColor: "lightcyan"}}>ALL</button>
+          <button className="dropbtn" style={{backgroundColor: "lightcyan"}}>ALL</button>
           
     </div>
   </div>       

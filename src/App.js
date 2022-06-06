@@ -3,7 +3,7 @@ import React from "react"
 import {BrowserRouter as Router, Routes, Route} from "react-router-dom"
 import NavBar from "./components/NavBar";
 import Home from "./components/Home"
-
+import BookContainer from "./containers/BookContainer"
 
 function App() {
     return (
@@ -15,6 +15,11 @@ function App() {
               exact path="/" 
               element={<Home />}>
               </Route>
+              <Route 
+              exact path="/books" 
+              element={<BookContainer />}>
+              </Route>
+
             </Routes>
         </div>
       </Router>
