@@ -1,11 +1,18 @@
-import React, { useState } from "react"
+import React, { useState, useEffect } from "react"
 import BookContainer from "../containers/BookContainer"
 
 
 const Home = () => {
 
   const [categories, setCategories] = useState("All")
-  
+  const [books, setBooks] = useState([])
+
+  useEffect(() => {
+    fetch("http://localhost:9292/books")
+    .then((res) => res.json())
+    .then((data) => console.log(data))
+  }, [])
+
 
   return (
     <div>
@@ -19,7 +26,7 @@ const Home = () => {
         <div className="dropdown">
           <button className="dropbtn" style={{backgroundColor: "lightcyan"}}>ALL</button>
         </div>
-        <BookContainer />
+        <BookContainer books={books}/>
   </div>       
   )
 }
