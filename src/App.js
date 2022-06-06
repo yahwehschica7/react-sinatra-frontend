@@ -3,9 +3,7 @@ import React from "react"
 import {BrowserRouter as Router, Routes, Route} from "react-router-dom"
 import NavBar from "./components/NavBar";
 import Home from "./components/Home"
-// import BookContainer from "./BookContainer";
-// import WriterResources from "./WriterResources";
-// import Counter from "./Counter";
+
 
 function App() {
     return (
@@ -17,7 +15,7 @@ function App() {
               exact path="/" 
               element={<Home />}>
               </Route>
-          </Routes>
+            </Routes>
         </div>
       </Router>
     )

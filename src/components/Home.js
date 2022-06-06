@@ -15,7 +15,8 @@ const Home = () => {
 
   return (
     <div>
-      <h2 style={{backgroundColor: "lightblue"}}>Books on your TBR:</h2>
+      <h1 style={{backgroundColor: "lightblue"}}>Welcome to your Infinite TBR List</h1>
+      <h2 >Books on your TBR:</h2>
         
         <div className="dropdown">
           <button class="dropbtn" style={{backgroundColor: "lightcyan"}}>ALL</button>
