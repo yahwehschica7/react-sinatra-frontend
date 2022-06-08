@@ -1,10 +1,13 @@
 import React from 'react'
-import BookContainer from '../containers/BookContainer'
+import CategoryList from './CategoryList'
 
 const CategoryContainer = ({categories}) => {
+
+
+
   return (
     <div>
-        
+        <CategoryList categories={categories} />
     </div>
   )
 }

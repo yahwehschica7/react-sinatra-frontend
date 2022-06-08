@@ -3,6 +3,7 @@ import React from "react"
 import {BrowserRouter as Router, Routes, Route} from "react-router-dom"
 import NavBar from "./components/NavBar";
 import Home from "./components/Home"
+import CategoryContainer from "./components/CategoryContainer";
 
 
 function App() {
@@ -15,8 +16,10 @@ function App() {
               exact path="/" 
               element={<Home />}>
               </Route>
-              
-
+              <Route 
+              exact path="/categories" 
+              element={<CategoryContainer />}>
+              </Route>
             </Routes>
         </div>
       </Router>

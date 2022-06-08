@@ -4,13 +4,13 @@ import CategoryContainer from "./CategoryContainer"
 
 const Home = () => {
 
-  const [categories, setCategories] = useState("All")
+  const [categories, setCategories] = useState([])
   const [books, setBooks] = useState([])
 
   useEffect(() => {
     fetch("http://localhost:9292/categories")
     .then((res) => res.json())
-    .then((data) => setCategories(data))
+    .then((data) => console.log(data))
   }, [])
 
 
@@ -27,6 +27,7 @@ const Home = () => {
           <button className="dropbtn" style={{backgroundColor: "lightcyan"}}>ALL</button>
         </div>
         <CategoryContainer categories={categories}/>
+        
   </div>       
   )
 }
