@@ -3,7 +3,7 @@ import React from "react"
 import {BrowserRouter as Router, Routes, Route} from "react-router-dom"
 import NavBar from "./components/NavBar";
 import Home from "./components/Home"
-import CategoryContainer from "./components/CategoryContainer";
+import CategoryContainer from "./containers/CategoryContainer";
 import BookContainer from "./containers/BookContainer"
 
 function App() {

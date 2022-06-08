@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react"
-import CategoryContainer from "./CategoryContainer"
+import CategoryContainer from "../containers/CategoryContainer"
 
 
 const Home = () => {
