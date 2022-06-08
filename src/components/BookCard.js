@@ -4,14 +4,14 @@ const BookCard = ({books}) => {
   return (
     <div>
         <h2>{books.map(book => 
-            <h3>
+            <li key={book.id}>
                 {book.title}
                 <div>by: {book.author}</div>
                     <div>My Thoughts:</div> 
                         <i>
                         <div>{book.comment}</div> 
                         </i>
-            </h3>
+            </li>
             )}
         </h2>
     </div>
