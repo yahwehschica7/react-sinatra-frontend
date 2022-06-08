@@ -18,6 +18,13 @@ const NavBar = () => {
             <h2>Edit Your TBR</h2>
             </button>
         </NavLink>
+        <NavLink
+            to="/books"
+            >
+            <button style={{backgroundColor: "lightcyan"}}>
+            <h2>All My Books</h2>
+            </button>
+        </NavLink>
        </div>
   )
 }
