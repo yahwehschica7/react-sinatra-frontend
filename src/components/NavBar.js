@@ -26,13 +26,7 @@ const NavBar = () => {
             </button>
         </NavLink>
        
-        <NavLink
-            to="/books/new"
-            >
-            <button style={{backgroundColor: "lightcyan"}}>
-            <h2>Add a Book</h2>
-            </button>
-        </NavLink>
+        
        </div>
   )
 }

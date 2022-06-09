@@ -1,8 +1,8 @@
-import React, { useState, useEffect } from "react"
+import React from "react"
 import CategoryContainer from "../containers/CategoryContainer"
 
 
-const Home = () => {
+const Home = ({categories}) => {
 
   
   return (
@@ -14,7 +14,7 @@ const Home = () => {
             /> 
       <h2 >My Amazing TBR Categories:</h2>
                 
-        <CategoryContainer categories={categories}/>
+       <CategoryContainer categories={categories}/>
         
   </div>       
   )
