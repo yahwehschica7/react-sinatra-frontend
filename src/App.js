@@ -5,8 +5,13 @@ import NavBar from "./components/NavBar";
 import Home from "./components/Home"
 import CategoryContainer from "./containers/CategoryContainer";
 import BookContainer from "./containers/BookContainer"
+import NewCategory from "./components/NewCategory"
+
 
 function App() {
+
+  // #books categories useEffect AddBook, AddCategory, DeleteBook
+
     return (
       <Router>
         <NavBar />
@@ -16,14 +21,16 @@ function App() {
               exact path="/" 
               element={<Home />}>
               </Route>
-              <Route 
-              exact path="/categories" 
-              element={<CategoryContainer />}>
-              </Route>
+              
               <Route 
               exact path="/books" 
               element={<BookContainer />}>
               </Route>
+              <Route 
+              exact path="/categories/new" 
+              element={<NewCategory />}>
+              </Route>
+                            
             </Routes>
         </div>
       </Router>
