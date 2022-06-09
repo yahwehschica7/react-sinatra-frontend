@@ -4,15 +4,7 @@ import CategoryContainer from "../containers/CategoryContainer"
 
 const Home = () => {
 
-  const [categories, setCategories] = useState([])
   
-  useEffect(() => {
-    fetch("http://localhost:9292/categories")
-    .then((res) => res.json())
-    .then((data) => setCategories(data))
-  }, [])
-
-
   return (
     <div>
       <h1 style={{backgroundColor: "lightcyan"}}>Welcome to your Infinite TBR List</h1>

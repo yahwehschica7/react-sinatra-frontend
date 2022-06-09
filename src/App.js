@@ -10,6 +10,14 @@ import NewCategory from "./components/NewCategory"
 
 function App() {
 
+  const [categories, setCategories] = useState([])
+  
+  useEffect(() => {
+    fetch("http://localhost:9292/categories")
+    .then((res) => res.json())
+    .then((data) => setCategories(data))
+  }, [])
+
   // #books categories useEffect AddBook, AddCategory, DeleteBook
 
     return (
@@ -19,10 +27,10 @@ function App() {
           <Routes>
             <Route 
               exact path="/" 
-              element={<Home />}>
+              element={<Home categories={categories}/>}>
               </Route>
               
-              <Route 
+            <Route 
               exact path="/books" 
               element={<BookContainer />}>
               </Route>
