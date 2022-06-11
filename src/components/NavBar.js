@@ -11,7 +11,6 @@ const NavBar = () => {
             <h2>Home</h2>
             </button>
         </NavLink>
-        
         <NavLink
             to="categories/new"
             >

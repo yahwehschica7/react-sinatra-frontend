@@ -1,5 +1,5 @@
 import React from "react"
-import CategoryContainer from "../containers/CategoryContainer"
+import CategoryList from "./CategoryList"
 
 
 const Home = ({categories}) => {
@@ -14,7 +14,7 @@ const Home = ({categories}) => {
             /> 
       <h2 >My Amazing TBR Categories:</h2>
                 
-       <CategoryContainer categories={categories}/>
+       <CategoryList categories={categories}/>
         
   </div>       
   )

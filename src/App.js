@@ -3,7 +3,6 @@ import React, {useState, useEffect} from "react"
 import {BrowserRouter as Router, Routes, Route} from "react-router-dom"
 import NavBar from "./components/NavBar";
 import Home from "./components/Home"
-import BookContainer from "./containers/BookContainer"
 import NewCategory from "./components/NewCategory"
 
 
@@ -30,12 +29,8 @@ function App() {
               </Route>
               
             <Route 
-              exact path="/books" 
-              element={<BookContainer />}>
-              </Route>
-              <Route 
               exact path="/categories/new" 
-              element={<NewCategory />}>
+              element={<NewCategory categories={categories}/>}>
               </Route>
                             
             </Routes>
