@@ -25,7 +25,7 @@ const NewCategory = () => {
     const resp = await fetch("http://localhost:9292/categories", options)
     const data = await resp.json()
     setName(data)
-    
+    navigate('/')
   }
     
   return (
