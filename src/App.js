@@ -27,12 +27,10 @@ function App() {
               exact path="/" 
               element={<Home categories={categories}/>}>
               </Route>
-              
             <Route 
               exact path="/categories/new" 
               element={<NewCategory categories={categories}/>}>
               </Route>
-                            
             </Routes>
         </div>
       </Router>
