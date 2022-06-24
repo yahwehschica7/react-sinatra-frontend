@@ -4,19 +4,24 @@ import {NavLink} from "react-router-dom"
 
 const CategoryList = ({categories}) => {
 
+  
+  
   const listOfCategories = categories.map(category => { 
-    return <li key={category.id}> 
-    <NavLink to={`{/categories/${category.id}}`}> {category.name} </NavLink>
-    <br></br>
+    return (
+    <li key={category.id}> 
+      <NavLink to={`/categories/${category.id}`}> {category.name} </NavLink> 
+    
+      <br></br>
       <button style={{backgroundColor: "lightcyan"}}> 
         Add a Book
       </button>
-    </li>  
+    </li> 
+    ) 
   })
   
   return (
     <div>
-       {listOfCategories}
+      {listOfCategories}
     </div>
   )
 }

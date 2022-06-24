@@ -4,7 +4,7 @@ import {BrowserRouter as Router, Routes, Route} from "react-router-dom"
 import NavBar from "./components/NavBar";
 import Home from "./components/Home"
 import NewCategory from "./components/NewCategory"
-import CategoryCard from "./components/CategoryCard";
+import CategoryDetails from "./components/CategoryDetails";
 
 function App() {
 
@@ -32,8 +32,8 @@ function App() {
               element={<NewCategory categories={categories}/>}>
               </Route>
               <Route 
-              exact path="/categories/:id" 
-              element={<CategoryCard categories={categories}/>}>
+              path="/categories/:id" 
+              element={<CategoryDetails categories={categories}/>}>
               </Route>
             </Routes>
         </div>
