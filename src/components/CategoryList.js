@@ -21,6 +21,10 @@ const CategoryList = ({categories}) => {
         <button style={{backgroundColor: "lightcyan"}}> 
           Add a Book
         </button>
+        <button style={{backgroundColor: "lightcyan"}}> 
+          Delete a Book
+        </button>
+        
       </div>
     ) 
   })
