@@ -12,19 +12,27 @@ const CategoryList = ({categories}) => {
   //   navigate(`/categories/${category.id}`)
   // }
   const listOfCategories = categories.map(category => { 
+    
     return (
       <div>
-      <li key={category.id} > 
-        <NavLink to={`/categories/${category.id}`}>{category.name} </ NavLink>  
-          <br></br>              
-      </li> 
-        <button style={{backgroundColor: "lightcyan"}}> 
-          Add a Book
-        </button>
-        <button style={{backgroundColor: "lightcyan"}}> 
-          Delete a Book
-        </button>
-        
+        <br></br>
+          <ul key={category.id} > 
+            <NavLink to={`/categories/${category.id}`}>{category.name} </ NavLink>  
+        <br></br>              
+          </ul> 
+            <button style={{backgroundColor: "lightcyan"}}> 
+                Edit Category
+              </button>
+              <button style={{backgroundColor: "lightcyan"}}> 
+              Delete Category
+              </button>
+              <button style={{backgroundColor: "lightcyan"}}> 
+                Add a Book
+              </button>
+              <button style={{backgroundColor: "lightcyan"}}> 
+                Delete a Book
+              </button>
+        <br></br>
       </div>
     ) 
   })
