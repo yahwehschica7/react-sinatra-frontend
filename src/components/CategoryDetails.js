@@ -1,19 +1,21 @@
 import React from 'react'
 
 
-const CategoryDetails = () => {
+const CategoryDetails = ({categories}) => {
 
-  const bookDetails = books.map(book => {
-    <li>{book.title} By {book.author} 
-    <p>
-      Comments: {book.comments}
-    </p>
-    </li> 
-})
+const listOfBooks = categories.map(category => { 
+  return (
+    category.books.map(b => b.title)
+  )})
+    
+
 
   return (
     <div>
-        <h2>{bookDetails}</h2>
+        <ul>Category Details
+          <li>{listOfBooks}</li>
+        </ul>
+        
     </div>
   )
 }

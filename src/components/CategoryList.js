@@ -1,21 +1,27 @@
 import React from 'react'
 import {NavLink} from "react-router-dom"
+import AddBook from './AddBook'
 
 
 const CategoryList = ({categories}) => {
+// create a function that when horror is clicked goes to CategoryDetails page
+   
 
-  
-  
+  // function handleClick (category) {
+  //   setCategory(category)
+  //   navigate(`/categories/${category.id}`)
+  // }
   const listOfCategories = categories.map(category => { 
     return (
-    <li key={category.id}> 
-      <NavLink to={`/categories/${category.id}`}> {category.name} </NavLink> 
-    
-      <br></br>
-      <button style={{backgroundColor: "lightcyan"}}> 
-        Add a Book
-      </button>
-    </li> 
+      <div>
+      <li key={category.id} > 
+        <NavLink to={`/categories/${category.id}`}>{category.name} </ NavLink>  
+          <br></br>              
+      </li> 
+        <button style={{backgroundColor: "lightcyan"}}> 
+          Add a Book
+        </button>
+      </div>
     ) 
   })
   

@@ -15,7 +15,7 @@ const Home = ({categories}) => {
       <h2 >My Amazing TBR Categories:</h2>
         <p> Click to See Books</p>
                 
-       <CategoryList categories={categories}/>
+       <CategoryList categories={categories} />
         
   </div>       
   )

@@ -10,6 +10,7 @@ function App() {
 
   const [categories, setCategories] = useState([])
   
+  
   useEffect(() => {
     fetch("http://localhost:9292/categories")
     .then((res) => res.json())
@@ -25,7 +26,7 @@ function App() {
           <Routes>
             <Route 
               exact path="/" 
-              element={<Home categories={categories}/>}>
+              element={<Home categories={categories} />}>
               </Route>
             <Route 
               exact path="/categories/new" 
@@ -33,7 +34,7 @@ function App() {
               </Route>
               <Route 
               path="/categories/:id" 
-              element={<CategoryDetails categories={categories}/>}>
+              element={<CategoryDetails categories={categories} />}>
               </Route>
             </Routes>
         </div>
