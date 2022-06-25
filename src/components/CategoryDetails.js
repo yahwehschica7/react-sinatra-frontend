@@ -3,19 +3,19 @@ import React from 'react'
 
 const CategoryDetails = ({categories}) => {
 
-const listOfBooks = categories.map(category => {
-  return ( 
-    <li key={category.id}> 
-      {console.log(category.books)} 
-    </li>
-  )})
+// const listOfBooks = categories.map(category => {
+//   return ( 
+//     <li key={category.id}> 
+//       {category.books.map(book => book.title)}
+//     </li>
+//   )})
     
 
 
   return (
     <div>
-        <ul>Category Details
-          {listOfBooks}
+        <ul>
+          List of Books
         </ul>
         
     </div>
