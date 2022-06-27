@@ -1,7 +1,6 @@
 import React from 'react'
 import {NavLink} from "react-router-dom"
-import AddBook from './AddBook'
-import CategoryDetails from './CategoryDetails'
+
 
 const CategoryList = ({categories}) => {
 
