@@ -13,8 +13,7 @@ const Home = ({categories}) => {
             className="book_image" alt="book" 
             /> 
       <h2 >My Amazing TBR Categories:</h2>
-        <p> Click to See Books</p>
-                
+                       
        <CategoryList categories={categories} />
         
   </div>       
