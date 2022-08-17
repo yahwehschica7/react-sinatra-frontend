@@ -4,17 +4,16 @@ import {NavLink} from "react-router-dom"
 
 const CategoryList = ({categories}) => {
 
-  const addBookForm = () => {
-    <NavLink to={`/categories/category_id/books`} />
-  }
+  
 
   const listOfCategories = categories.map(category => { 
-    
+
+   
     return (
       <div>
         <br></br>
           <ul key={category.id} > 
-            <NavLink to={`/categories/${category.id}`}><h1>{category.name}</h1> </ NavLink>
+            <h1>{category.name}</h1>
             <li key={category.id}> 
               {category.books.map((book) => {
                 return (
@@ -33,14 +32,16 @@ const CategoryList = ({categories}) => {
               <button style={{backgroundColor: "lightcyan"}}> 
               Delete Category
               </button>
-              <button 
-              style={{backgroundColor: "lightcyan"}}
-              onClick={addBookForm} >
+              <NavLink to={`/categories/${category.id}`}> 
+                <button  style={{backgroundColor: "lightcyan"}}>
                 Add a Book
-              </button>
+                </button>
+              </ NavLink>
+              <NavLink to={`/categories/${category.id}`}>
               <button style={{backgroundColor: "lightcyan"}}> 
                 Delete a Book
               </button>
+              </ NavLink>
         <br></br>
       </div>
     ) 
