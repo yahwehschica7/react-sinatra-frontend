@@ -37,7 +37,7 @@ const CategoryList = ({categories}) => {
                 Add a Book
                 </button>
               </ NavLink>
-              <NavLink to={`/categories/${category.id}`}>
+              <NavLink to={`/books/${category.books.id}`}>
               <button style={{backgroundColor: "lightcyan"}}> 
                 Delete a Book
               </button>
