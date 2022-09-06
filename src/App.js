@@ -4,6 +4,7 @@ import {BrowserRouter as Router, Routes, Route} from "react-router-dom"
 import NavBar from "./components/NavBar";
 import Home from "./components/Home"
 import NewCategory from "./components/NewCategory"
+import CategoryName from "./components/CategoryName";
 // import AddBook from "./components/AddBook";
 // import DeleteBook from "./components/DeleteBook";
 
@@ -15,12 +16,13 @@ function App() {
         <div className="App">
           <Routes>
             <Route 
-              exact path="/" 
-              element={<Home />}>
+              exact path="/" element={<Home />}>
               </Route>
             <Route 
-              exact path="/categories/new" 
-              element={<NewCategory />}>
+              exact path="/categories/new" element={<NewCategory />}>
+              </Route>
+              <Route 
+              path="/categories/:id" element={<CategoryName />}>
               </Route>
             </Routes>
         </div>

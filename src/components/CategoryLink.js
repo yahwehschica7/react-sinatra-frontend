@@ -4,7 +4,7 @@ import { Link } from "react-router-dom"
 const CategoryLink = ({category}) => {
   return (
     <div>
-        <Link to={`http://localhost:9292/categories/${category.id}`}>
+        <Link to={`/categories/${category.id}`}>
             <h3>{category.name}</h3>
         </Link>
     </div>
