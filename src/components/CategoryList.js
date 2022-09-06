@@ -1,18 +1,24 @@
-import React from 'react'
-import {NavLink} from "react-router-dom"
+import React, {useEffect, useState} from 'react'
+
 
 
 const CategoryList = () => {
   const [categories, setCategories] = useState([])
-  
+  // const [categoryFormFlag, setCategoryFormFlag] = useState(false)
+
   useEffect(() => {
     fetch("http://localhost:9292/categories")
     .then((res) => res.json())
     .then((data) => setCategories(data))
   }, [])
+
+  const categoriesList = categories.map( c => <CategoryLink key={c.id} category={c} />)
+
   return (
     <div>
-      {listOfCategories}
+      <ul>
+        {categoriesList}
+      </ul>
     </div>
   )
 }
