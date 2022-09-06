@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import { useParams } from "react-router-dom"
+import Book from "./Book"
 
 const CategoryName = () => {
     const [category, setCategory] = useState({
@@ -13,13 +14,19 @@ const CategoryName = () => {
         fetch(`http://localhost:9292/categories/${params.id}`)
         .then(res => res.json())
         .then(data => {
-            console.log(data)
+            setCategory(data)
         })
     }, [])
+
+    const books = category.books.map(b => <Book key={b.id} book={b} />)
   
     return (
         <div>
-            <h3>I am a Category Name</h3>
+            <br />
+            <h2>{category.name}</h2>
+            <h3>Books:</h3>
+            <br />
+            {books}
         </div>
     )
 }
