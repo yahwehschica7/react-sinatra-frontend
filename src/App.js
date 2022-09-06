@@ -3,9 +3,9 @@ import React, {useState, useEffect} from "react"
 import {BrowserRouter as Router, Routes, Route} from "react-router-dom"
 import NavBar from "./components/NavBar";
 import Home from "./components/Home"
-import NewCategory from "./components/NewCategory"
-import AddBook from "./components/AddBook";
-import DeleteBook from "./components/DeleteBook";
+// import NewCategory from "./components/NewCategory"
+// import AddBook from "./components/AddBook";
+// import DeleteBook from "./components/DeleteBook";
 
 function App() {
 
@@ -18,7 +18,7 @@ function App() {
     .then((data) => setCategories(data))
   }, [])
 
-  // #books categories useEffect AddBook, AddCategory, DeleteBook
+  
 
     return (
       <Router>
@@ -29,18 +29,18 @@ function App() {
               exact path="/" 
               element={<Home categories={categories} />}>
               </Route>
-            <Route 
+            {/* <Route 
               exact path="/categories/new" 
               element={<NewCategory categories={categories}/>}>
-              </Route>
-              <Route 
+              </Route> */}
+              {/* <Route 
               exact path="/categories/:id"
               element={<AddBook categories={categories}/>}>
               </Route>
               <Route 
               exact path="/categories/:id"
               element={<DeleteBook categories={categories}/>}>
-              </Route>
+              </Route> */}
             </Routes>
         </div>
       </Router>
