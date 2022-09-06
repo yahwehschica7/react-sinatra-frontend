@@ -20,11 +20,13 @@ function App() {
               </Route>
             <Route 
               exact path="/categories/new" element={<NewCategory />}>
-              </Route>
-              <Route 
+            </Route>
+            <Route 
               path="/categories/:id" element={<CategoryName />}>
-              </Route>
-            </Routes>
+            </Route>
+            
+            
+          </Routes>
         </div>
       </Router>
     )
