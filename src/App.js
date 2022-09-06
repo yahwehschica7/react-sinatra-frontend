@@ -9,38 +9,19 @@ import NewCategory from "./components/NewCategory"
 
 function App() {
 
-  const [categories, setCategories] = useState([])
-  
-  
-  useEffect(() => {
-    fetch("http://localhost:9292/categories")
-    .then((res) => res.json())
-    .then((data) => setCategories(data))
-  }, [])
-
-  
-
-    return (
-      <Router>
-        <NavBar />
+  return (
+    <Router>
+      <NavBar />
         <div className="App">
           <Routes>
             <Route 
               exact path="/" 
-              element={<Home categories={categories} />}>
+              element={<Home />}>
               </Route>
             <Route 
               exact path="/categories/new" 
-              element={<NewCategory categories={categories}/>}>
+              element={<NewCategory />}>
               </Route>
-              {/* <Route 
-              exact path="/categories/:id"
-              element={<AddBook categories={categories}/>}>
-              </Route>
-              <Route 
-              exact path="/categories/:id"
-              element={<DeleteBook categories={categories}/>}>
-              </Route> */}
             </Routes>
         </div>
       </Router>
