@@ -1,17 +1,9 @@
-import React, {useEffect, useState} from 'react'
+import React from 'react'
 import CategoryLink from "./CategoryLink"
 
 
-const CategoryList = () => {
-  const [categories, setCategories] = useState([])
-  // const [categoryFormFlag, setCategoryFormFlag] = useState(false)
-
-  useEffect(() => {
-    fetch("http://localhost:9292/categories")
-    .then((res) => res.json())
-    .then((data) => setCategories(data))
-  }, [])
-
+const CategoryList = ({categories}) => {
+ 
   const categoriesList = categories.map( c => <CategoryLink key={c.id} category={c} />)
 
   return (

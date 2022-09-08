@@ -2,7 +2,7 @@ import React from "react"
 import CategoryList from "./CategoryList"
 
 
-const Home = () => {
+const Home = ({categories}) => {
 
   
   return (
@@ -14,7 +14,7 @@ const Home = () => {
             /> 
       <h2 >My Amazing TBR Categories:</h2>
                        
-       <CategoryList />
+       <CategoryList categories={categories} />
         
   </div>       
   )
