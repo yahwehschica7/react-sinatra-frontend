@@ -2,10 +2,10 @@ import "./index.css"
 import React from "react"
 import {BrowserRouter as Router, Routes, Route} from "react-router-dom"
 import NavBar from "./components/NavBar";
-import Home from "./components/Home"
+import Home from "./components/Home";
 import NewCategory from "./components/NewCategory"
 import CategoryName from "./components/CategoryName";
-// import AddBook from "./components/AddBook";
+import AddBook from "./components/AddBook";
 // import DeleteBook from "./components/DeleteBook";
 
 function App() {
@@ -24,6 +24,8 @@ function App() {
             <Route 
               path="/categories/:id" element={<CategoryName />}>
             </Route>
+            <Route 
+              exact path="/books/new" element={<AddBook />}></Route>
             
             
           </Routes>
