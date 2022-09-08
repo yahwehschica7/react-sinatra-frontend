@@ -2,12 +2,12 @@ import React, { useState, useEffect } from 'react'
 import { useParams } from "react-router-dom"
 import Book from "./Book"
 
+
 const CategoryName = () => {
     const [category, setCategory] = useState({
         books: []
     })
-    // const [bookFormFlag, setBookFormFlag] = useState(false)
-
+    
     const params = useParams()
 
     useEffect(() => {
@@ -19,12 +19,11 @@ const CategoryName = () => {
     }, [])
 
     const books = category.books.map(b => <Book key={b.id} book={b} />)
-  
+    
     return (
         <div>
             <br />
             <h2>{category.name}</h2>
-            <h3>Books:</h3>
             <br />
             {books}
         </div>

@@ -18,6 +18,14 @@ const NavBar = () => {
             <h2>Create Category</h2>
             </button>
         </NavLink>
+        <NavLink
+            to="books/new"
+            >
+            <button style={{backgroundColor: "lightcyan"}}>
+            <h2>Add Books</h2>
+            </button>
+        </NavLink>
+        
        
         
        </div>
