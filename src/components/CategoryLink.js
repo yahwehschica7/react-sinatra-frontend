@@ -9,7 +9,11 @@ const CategoryLink = ({category, deleteBook}) => {
     <div>
         <Link to={`/categories/${category.id}`}>
             <h3> 
-              {category.name} 
+            {category.name}
+            <br />
+            <button>
+              Delete Category
+            </button>  
                 
             </h3> 
         </Link>
