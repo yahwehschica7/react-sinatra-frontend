@@ -1,7 +1,10 @@
 import React, { useState } from 'react'
+import {useNavigate} from "react-router-dom"
 
 const AddBook = ({categories}) => {
-  
+    
+    let navigate = useNavigate();  
+
     const [formData, setFormData] = useState({
         title: "",
         author: "",
@@ -33,7 +36,8 @@ const AddBook = ({categories}) => {
             body: JSON.stringify(formData)
         })
             .then(r => r.json())
-            .then((data) => console.log(data))
+            .then((data) => setFormData(data))
+            navigate('/')
     }
        return(
         <form onSubmit={handleSubmit}>
