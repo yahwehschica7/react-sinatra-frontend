@@ -11,12 +11,11 @@ const CategoryLink = ({category, deleteBook}) => {
             <h3> 
             {category.name}
             <br />
-            <button>
-              Delete Category
-            </button>  
-                
             </h3> 
         </Link>
+        <button>
+              Delete Category
+            </button>
     </div>
   )
 }
